@@ -9,7 +9,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Etapa 2: Desplegar en el servidor Apache Tomcat 10
-FROM tomcat:10.1-jdk17
+FROM tomcat:9.0-jdk17
 
 # Limpiamos las aplicaciones por defecto de Tomcat para que no haya conflictos
 RUN rm -rf /usr/local/tomcat/webapps/*
